@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Array</title>
+    <script>
+        // Viene creato un array chiamato 'giorni' contenente i giorni della settimana
+        var giorni = [' LUNEDI','MARTEDI','MERCOLEDI','GIOVEDI','VENERDI',
+            'SABATO','DOMENICA'];
+
+        // L'array 'giorni' viene assegnato alla variabile 'giorniCopia'
+        // Attenzione: non è una copia indipendente, ma un riferimento allo stesso array
+        var giorniCopia = giorni;
+
+        // Stampa l'array 'giorniCopia' nella console
+        console.log(giorniCopia);
+
+        // Si modifica il primo elemento dell'array 'giorniCopia'
+        giorniCopia[0] ='Lunedi';
+
+        // Poiché 'giorniCopia' e 'giorni' puntano allo stesso array,
+        // il cambiamento si riflette anche su 'giorni'
+        console.log(giorni);        // Mostra l'array modificato
+        console.log(giorniCopia);   // Anche qui si vede la modifica
+
+        // Esempio con variabili primitive
+        var mioNum = 10;    // Definisce una variabile con valore 10
+        var num2 = mioNum;  // Copia il valore di 'mioNum' in 'num2'
+
+        // Si modifica 'num2', ma 'mioNum' rimane invariato
+        num2 = 4;
+
+        // Stampa entrambi i valori per mostrare che sono indipendenti
+        console.log(mioNum); // Mostra 10
+        console.log(num2);   // Mostra 4
+    </script>
+</head>
+<body>
+    <span style='font-size:100px;'>&#128536;</span>
+    <span style='font-size:100px;'>&#128545;</span>
+    <span style='font-size:100px;'>&#128527;</span>
+</body>
+</html>
