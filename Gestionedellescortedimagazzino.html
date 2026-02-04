@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<body>
+    <h1>Verifica di recupero JavaScript</h1>
+    <script>
+        let prodotti = [
+            {nome : "cuffie",quantitàIniziale : 110,movimenti:[12,34,23]},
+            {nome : "telefono",quantitàIniziale : 120,movimenti:[22,56,32]},
+            {nome : "mouse",quantitàIniziale : 130,movimenti:[21,26,33]}
+        ];
+        // funzione per aggiornare le quantità
+       function aggiornaScorta(quantitàIniziale, ...valori){
+            let totale = quantitàIniziale;
+            for(let i = 0;i < valori.length;i++){
+                totale = totale + valori;
+            }
+            return totale;
+        };
+
+        console.log("---ESERCIZIO 2---");
+
+        for(let i = 0; i< prodotti.length;i++){
+            let p = prodotti[i];
+            let risultato = aggiornaScorta(p.quantitàIniziale,...p.movimenti);
+            console.log("Nome Prodotto: " + p.nome);
+            console.log("Quantità aggiunta:" + p.movimenti);
+            console.log("Quantità finale: " + risultato);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<body>
+    <h1>Verifica di recupero JavaScript</h1>
+    <script>
+        let quantitàIniziale = 10;
+        let valori = [ +10,+3,+4,-5];
+
+        function gestisciMagazzino(quantitàIniziale,...altriValori){
+            let totale = quantitàIniziale;
+            for(let i = 0; i < altriValorilength;i++){
+                totale = totale + altriValori;
+            }
+            return totale;
+        };
+
+        console.log("--- ESERCIZIO 1 ---");
+        for(let i = 0;i<valori.length;i++){
+            let v = valori[i];
+            let risultato = gestisciMagazzino(v.quantitàIniziale,...valori);
+            console.log("I valori dopo la prima operazione: " + risultato);
+        }
+        
+
+    </script>
+</body>
+</html>
